@@ -22,7 +22,7 @@ static void Echo(string? phrase, int deep)
     }
 }
 
-static int Factorial(int x)
+static decimal Factorial(decimal x)
 {
     if (x == 0)
     {
