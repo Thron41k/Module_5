@@ -3,7 +3,8 @@
 //Console.WriteLine("Укажите глубину эха");
 //var deep = int.Parse(Console.ReadLine() ?? "1");
 //Echo(str, deep);
-Console.WriteLine(Factorial(20));
+//Console.WriteLine(Factorial(20));
+Console.WriteLine(PowerUp(5,5));
 Console.ReadKey();
 return;
 
@@ -29,4 +30,14 @@ static decimal Factorial(decimal x)
         return 1;
     }
     return x * Factorial(x - 1);
+}
+
+static int PowerUp(int n, byte pow)
+{
+    return pow switch
+    {
+        0 => 1,
+        1 => n,
+        _ => n * PowerUp(n, --pow)
+    };
 }
