@@ -1,4 +1,7 @@
 ﻿ShowUserData(GetUserData());
+Console.WriteLine();
+Console.WriteLine("Нажмите любую клавишу для выхода.");
+Console.ReadKey();
 return;
 
 static void ShowUserData((string Name, string Surname, int Age, string[] Pets, string[] FavColors) userData)
@@ -48,7 +51,7 @@ static (string Name, string Surname, int Age, string[] Pets, string[] FavColors)
     userData.Age = ReadInputNumerical();
     userData.Pets = Array.Empty<string>();
     Console.WriteLine("У вас есть домашние питомцы?(Да/Нет):");
-    if (PetsQuestion())
+    if (YesNoQuestion())
     {
         Console.WriteLine("Сколько у вас домашних питомцев?:");
         var petsCount = ReadInputNumerical();
@@ -68,7 +71,7 @@ static string[] GetInputStringArray(int arraySize,string question)
     }
     return array;
 }
-static bool PetsQuestion()
+static bool YesNoQuestion()
 {
     while (true)
     {
